@@ -1,11 +1,11 @@
-# ** Sales Data Analysis using SQLite & Python**
+# **Sales Data Analysis using SQLite & Python**
 ---
 ## **Project Overview**
 This project utilizes **SQLite** as the database engine to store and analyze retail sales data. **Pandas** is used for handling datasets, and **Matplotlib/Seaborn** generate visual insights into revenue trends, product performance, and customer purchasing behavior.
 
 ---
 
-## ** Features**
+## **Features**
 ✅ **Store & manage sales data in SQLite**  
 ✅ **Extract insights using SQL queries & Pandas**  
 ✅ **Visualize trends with Matplotlib & Seaborn**  
@@ -21,7 +21,7 @@ This project utilizes **SQLite** as the database engine to store and analyze ret
 
 ---
 
-## ** Database Setup**
+## **Database Setup**
 ### **1️ Create & Upload Data**
 Convert and load the sales dataset into SQLite before analysis:
 ```python
@@ -41,7 +41,7 @@ conn.close()
 
 ---
 
-### **2️⃣ Querying Data**
+### **2️ Querying Data**
 Retrieve monthly revenue from the database:
 ```python
 query = '''SELECT strftime('%Y-%m', InvoiceDate) AS Month, 
@@ -57,7 +57,7 @@ print(df_.head())  # Display the top results
 
 ---
 
-## **📊 Visualizations**
+## **Visualizations**
 ### **1 Sales Trends Over Time**
 ```python
 import matplotlib.pyplot as plt
@@ -67,11 +67,11 @@ plt.figure(figsize=(12,6))
 sns.lineplot(data=df_, x='Month', y='revenue')
 plt.xlabel("Month")
 plt.ylabel("Total Revenue")
-plt.title("📈 Sales Trends Over Time")
+plt.title(" Sales Trends Over Time")
 plt.xticks(rotation=45)
 plt.show()
 ```
-🔹 **Insight**: Tracks revenue fluctuations to identify peak sales periods.
+ **Insight**: Tracks revenue fluctuations to identify peak sales periods.
 
 ---
 
@@ -88,10 +88,10 @@ plt.figure(figsize=(12,6))
 sns.barplot(data=df_top_products, x='total_sold', y='Description', palette="coolwarm")
 plt.xlabel("Total Sold")
 plt.ylabel("Product")
-plt.title("🥇 Top-Selling Products")
+plt.title(" Top-Selling Products")
 plt.show()
 ```
-🔹 **Insight**: Helps businesses focus on high-demand products.
+ **Insight**: Helps businesses focus on high-demand products.
 
 ---
 
@@ -107,14 +107,14 @@ plt.figure(figsize=(12,6))
 sns.histplot(df_customers['total_spent'], bins=30, kde=True, color="green")
 plt.xlabel("Total Amount Spent")
 plt.ylabel("Number of Customers")
-plt.title("🛍️ Customer Spending Distribution")
+plt.title(" Customer Spending Distribution")
 plt.show()
 ```
-🔹 **Insight**: Identifies customer spending patterns.
+ **Insight**: Identifies customer spending patterns.
 
 ---
 
-## **📌 Next Steps**
+## **Next Steps**
 🔹 **Optimize queries** for faster execution  
 🔹 **Deploy as a dashboard using Flask or Streamlit**  
 🔹 **Enhance visualization with interactive tools**  

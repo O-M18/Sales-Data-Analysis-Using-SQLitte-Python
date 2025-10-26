@@ -115,11 +115,11 @@ plt.show()
 ---
 
 ## **Next Steps**
- **Optimize queries** for faster execution  
+ **Optimize queries**: for faster execution  
  **Deploy as a dashboard using Flask or Streamlit**  
  **Enhance visualization with interactive tools**  
----
 
+----
 ### **Author**
 Developed by **OM Mane**  
 
